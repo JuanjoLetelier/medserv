@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDSERV - Centro Médico</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MEDSERV</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarVista('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="mostrarVista('nosotros')">Nosotros</a></li>
+                <li><a href="#" onclick="mostrarVista('especialidades')">Especialidades</a></li>
+                <li><a href="#" onclick="mostrarVista('productos')">Productos Médicos</a></li>
+                <li><a href="#" onclick="mostrarVista('cotizar')">Cotiza con Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="vista">
+            <h2>Bienvenidos a MEDSERV</h2>
+            <p>Tu salud, nuestra prioridad.</p>
+        </section>
+
+        <section id="nosotros" class="vista" style="display: none;">
+            <h2>Nosotros</h2>
+            <div class="contenedor-centrado">  <!-- ✅ Contenedor agregado para centrar -->
+                <p>
+                    MEDSERV es una empresa líder en Chile con 19 centros médicos. Nos especializamos en 
+                    la venta, mantenimiento y calibración de dispositivos médicos como máquinas de diálisis, 
+                    desfibriladores, balanzas digitales, plantas de agua y más.
+                </p>
+                <p>
+                    Fundada en 2013, contamos con más de 20 años de experiencia en el área, prestando servicios 
+                    de mantenimiento, evaluación y reparación de dispositivos médicos tanto a nivel nacional como internacional.
+                </p>
+            </div>
+        </section>
+        
+        <section id="especialidades" class="vista" style="display: none;">
+            <h2>Nuestras Especialidades</h2>
+            <div class="contenedor-centrado">  <!-- ✅ Contenedor agregado para centrar -->
+                <ul>
+                    <li>Mantenimiento de equipos médicos</li>
+                    <li>Calibración y evaluación de dispositivos</li>
+                    <li>Venta de repuestos y accesorios</li>
+                    <li>Servicio técnico especializado</li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <section id="productos" class="vista" style="display: none;">
+            <h2>Productos Médicos</h2>
+            <div class="contenedor-productos">  <!-- ✅ Encapsulado en un div -->
+                <div id="lista-productos"></div>
+            </div>
+        </section>
+        
+        <section id="cotizar" class="vista" style="display: none;">
+            <h2>Cotiza con Nosotros</h2>
+        
+            <div class="contenedor-productos">  <!-- ✅ Encapsulado en un div -->
+                <h3>Lista de Productos</h3>
+                <div id="productos-lista"></div>
+            </div>
+        
+            <h3>Productos Seleccionados</h3>
+            <div id="productos-disponibles"></div>
+        
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="vaciarCotizacion()">Vaciar Cotización</button>
+        
+            <h3>Solicita tu cotización</h3>
+            <form id="form-cotizacion">
+                <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                <input type="email" id="email" placeholder="Tu Email" required>
+                <button type="submit">Enviar Cotización</button>
+            </form>
+            <p id="mensaje-envio"></p>
+        </section>
+    </main>
+
+</body>
+</html>
