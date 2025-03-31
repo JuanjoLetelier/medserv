@@ -43,7 +43,7 @@ function mostrarProductosCotizar() {
         let item = document.createElement('div');
         item.className = "producto-cotizacion";
         item.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto"> <!-- ✅ Imagen agregada -->
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto">
             <p>${producto.nombre} - $${producto.precio}</p>
             <div>
                 <button onclick="modificarCantidad(${index}, -1)">-</button>
